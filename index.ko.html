@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlightFinder – 항공편 추적의 재발견</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:#f5f7fa;--text:#1a1a2e;--muted:#6b7280;--border:#e5e7eb;--accent:#2563eb;--accent-hover:#1d4ed8;--card-bg:#fff;--sidebar-bg:#1a1a2e;--sidebar-text:#e5e7eb;--sidebar-active:#2563eb}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}.sidebar{position:fixed;top:0;left:0;width:180px;height:100vh;background:var(--sidebar-bg);color:var(--sidebar-text);padding:2rem 1rem;overflow-y:auto;z-index:100}.sidebar h3{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:#9ca3af;margin-bottom:1.5rem}.lang-list{list-style:none;display:flex;flex-direction:column;gap:.25rem}.lang-list a{display:flex;align-items:center;gap:.5rem;padding:.5rem .75rem;border-radius:6px;color:var(--sidebar-text);text-decoration:none;font-size:.875rem;transition:background .2s;cursor:pointer}.lang-list a:hover{background:rgba(255,255,255,.1)}.lang-list a.active{background:var(--sidebar-active);font-weight:600}.lang-list .flag{font-size:1.1rem;line-height:1}.main{margin-left:180px;max-width:900px;padding:3rem 2.5rem 4rem}.hero{padding:3rem 0 2.5rem}.hero h1{font-size:2.5rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.5rem}.hero .tagline{font-size:1.2rem;color:var(--muted);margin-bottom:1.5rem}.hero .badge{display:inline-flex;align-items:center;gap:.4rem;background:#dbeafe;color:var(--accent);padding:.35rem .9rem;border-radius:20px;font-size:.8rem;font-weight:600}h2{font-size:1.35rem;font-weight:700;margin-bottom:1rem;margin-top:2.5rem}.card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:1.25rem;transition:box-shadow .2s}.card:hover{box-shadow:0 4px 14px rgba(0,0,0,.06)}.card h3{font-size:1.05rem;font-weight:600;margin-bottom:.5rem}.card p{color:var(--muted);font-size:.95rem;margin-bottom:0}.card .emoji{font-size:1.6rem;display:block;margin-bottom:.6rem}.card .arrow{color:var(--accent);font-weight:600}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.cta{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:1.25rem 1.5rem;display:block;text-decoration:none;cursor:pointer;transition:background .2s}.cta:hover{background:var(--accent-hover);text-decoration:none}.cta h3{color:#fff;margin-bottom:.25rem}.cta p{color:rgba(255,255,255,.85);font-size:.9rem;margin:0}.cta .arrow{color:rgba(255,255,255,.7);margin-left:.3rem}.store-badge{display:inline-flex;align-items:center;gap:.5rem;background:#000;color:#fff;padding:.65rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:.9rem;transition:opacity .2s;margin-top:1.5rem}.store-badge:hover{opacity:.85;text-decoration:none}.store-badge .icon{font-size:1.3rem}footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.85rem;color:var(--muted)}footer a{color:var(--accent)}@media(max-width:720px){.sidebar{position:relative;width:100%;height:auto;padding:1rem}.lang-list{flex-direction:row;flex-wrap:wrap;gap:.25rem}.lang-list a{padding:.35rem .5rem;font-size:.8rem}.sidebar h3{margin-bottom:.75rem}.main{margin-left:0;padding:1.5rem 1rem 3rem}.hero{padding:1.5rem 0}.hero h1{font-size:1.8rem}.grid-2{grid-template-columns:1fr}}</style>
+<script>
+(function(){var c=document.cookie.match(new RegExp('(^| )lang=([^;]+)'));if(!c)return;var l=c[2],p=document.documentElement.lang;if(l&&l!==p){var m={en:'',fr:'.fr',de:'.de',es:'.es',it:'.it',ru:'.ru',zh:'.zh',ja:'.ja',ko:'.ko',hi:'.hi'},b=window.location.pathname.split('/').pop().split('.')[0];window.location.href=b+(m[l]||'')+'.html'}})();
+document.addEventListener('DOMContentLoaded',function(){document.querySelector('.lang-list').addEventListener('click',function(e){var l=e.target.closest('a');if(!l)return;var d=l.getAttribute('data-lang');if(d)document.cookie='lang='+d+';path=/;max-age='+(365*24*60*60)})});
+</script>
+</head>
+<body>
+<nav class="sidebar" aria-label="언어 선택">
+<h3>언어</h3>
+<ul class="lang-list">
+<li><a href="index.html" data-lang="en"><span class="flag">🇬🇧</span> English</a></li>
+<li><a href="index.fr.html" data-lang="fr"><span class="flag">🇫🇷</span> Français</a></li>
+<li><a href="index.de.html" data-lang="de"><span class="flag">🇩🇪</span> Deutsch</a></li>
+<li><a href="index.es.html" data-lang="es"><span class="flag">🇪🇸</span> Español</a></li>
+<li><a href="index.it.html" data-lang="it"><span class="flag">🇮🇹</span> Italiano</a></li>
+<li><a href="index.ru.html" data-lang="ru"><span class="flag">🇷🇺</span> Русский</a></li>
+<li><a href="index.zh.html" data-lang="zh"><span class="flag">🇨🇳</span> 中文</a></li>
+<li><a href="index.ja.html" data-lang="ja"><span class="flag">🇯🇵</span> 日本語</a></li>
+<li><a href="index.ko.html" data-lang="ko" class="active"><span class="flag">🇰🇷</span> 한국어</a></li>
+<li><a href="index.hi.html" data-lang="hi"><span class="flag">🇮🇳</span> हिन्दी</a></li>
+</ul>
+</nav>
+<main class="main">
+<section class="hero">
+<span class="badge">v1.0 &middot; 오픈 소스</span>
+<h1>FlightFinder</h1>
+<p class="tagline">휴대폰을 하늘로 향하고 머리 위의 모든 비행기를 발견하세요.</p>
+<a class="store-badge" href="https://play.google.com/store/apps/details?id=com.lewisnclarkexploration.flightfinder" target="_blank" rel="noopener">
+<span class="icon">▶</span> Google Play에서 다운로드
+</a>
+</section>
+
+<h2>주요 기능</h2>
+<div class="grid-2">
+<div class="card">
+<span class="emoji">📡</span>
+<h3>실시간 하늘 포인터</h3>
+<p>휴대폰을 들고 실제 하늘 위에 오버레이된 항공기 라벨을 확인하세요. 자이로스코프 + 나침반 + AR 카메라 뷰로 즉시 식별 가능합니다.</p>
+</div>
+<div class="card">
+<span class="emoji">🌍</span>
+<h3>세계 지도</h3>
+<p>라이브 지도에서 해당 지역의 모든 항공편을 추적하세요. 항공기를 탭하여 경로, 항공사 및 목적지를 확인할 수 있습니다.</p>
+</div>
+<div class="card">
+<span class="emoji">✈️</span>
+<h3>항공편 상세 정보</h3>
+<p>사진, 신뢰도 점수, 경로 시각화 및 국가 추적을 갖춘 풍부한 항공편 카드 — 모두 실시간으로 업데이트됩니다.</p>
+</div>
+<div class="card">
+<span class="emoji">🗺️</span>
+<h3>국가 탐험가</h3>
+<p>새로운 국가로 가는 항공편을 발견할 때마다 축하하세요. 대화형 히트맵이 글로벌 커버리지를 보여줍니다.</p>
+</div>
+</div>
+
+<h2>개인정보 보호 우선</h2>
+<div class="card">
+<p>FlightFinder는 <strong>기본적으로 프라이빗</strong>하게 설계되었습니다. 계정 없음, 분석 SDK 없음, 개인 데이터 수집 없음. 귀하의 대략적인 위치는 <strong>OpenSky Network</strong>에만 전송되어 근처 항공기 정보를 가져옵니다 — 그 외에는 어떤 데이터도 기기를 떠나지 않습니다.</p>
+<a href="privacy-policy.ko.html" class="arrow" style="display:inline-block;margin-top:.75rem">개인정보처리방침 읽기 &rarr;</a>
+</div>
+
+<h2>작동 원리</h2>
+<div class="card">
+<p>FlightFinder는 <strong>OpenSky Network</strong>의 공개 ADS-B 데이터와 <strong>ADSBDB</strong>의 보강 정보를 결합하여 API 키나 사용자 계정 없이 포괄적인 항공편 정보를 제공합니다. 항공기 위치는 20초마다 업데이트되고 부드럽게 보간되어 원활한 실시간 추적을 제공합니다.</p>
+</div>
+
+<a class="cta" href="https://play.google.com/store/apps/details?id=com.lewisnclarkexploration.flightfinder" target="_blank" rel="noopener">
+<h3>FlightFinder 다운로드 &rarr;</h3>
+<p>지금 Google Play에서 이용 가능 &mdash; 무료, 광고 없음, 추적 없음.</p>
+</a>
+
+<footer>
+<p>&copy; 2026 Lewis &amp; Clark Exploration. 연락처: <a href="mailto:lewisnclark.exploration@gmail.com">lewisnclark.exploration@gmail.com</a></p>
+<p style="margin-top:.25rem"><a href="privacy-policy.ko.html">개인정보처리방침</a></p>
+</footer>
+</main>
+</body>
+</html>
