@@ -1,5 +1,5 @@
 {
-  "latestVersionCode": 4,
-  "latestVersionName": "1.0.1",
-  "updateMessage": "Several patches : \nApplication auto update\n etc ..."
+  "latestVersionCode": 5,
+  "latestVersionName": "1.0.2",
+  "updateMessage": "Several patches : \n  - Application auto update detection\n  - world map orientation\n  - add elevation filter"
 }
