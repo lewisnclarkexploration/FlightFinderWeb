@@ -1,5 +1,5 @@
 {
-  "latestVersionCode": 5,
-  "latestVersionName": "1.0.2",
-  "updateMessage": "Several patches : \n  - Application auto update detection\n  - world map orientation\n  - add elevation filter"
+  "latestVersionCode": 6,
+  "latestVersionName": "1.0.3",
+  "updateMessage": "Several patches : \n  - remove OpenSky deprecated API : metadata \n   - bug correction for missing airports on the world map"
 }
