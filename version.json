@@ -1,5 +1,5 @@
 {
-  "latestVersionCode": 6,
-  "latestVersionName": "1.0.3",
-  "updateMessage": "Several patches : \n  - remove OpenSky deprecated API : metadata \n   - bug correction for missing airports on the world map"
+  "latestVersionCode": 7,
+  "latestVersionName": "1.0.4",
+  "updateMessage": "New features : \n  - New detailed view  \n   - add dark mode \n  - visualize route on map"
 }
